@@ -143,6 +143,19 @@
 				],
 				"stateMutability": "view",
 				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "withdraw",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -195,11 +208,11 @@
 	},
 	"sources": {
 		"Рабочий стол/ETH projects/Open Auction/open_auction/auction.sol": {
-			"keccak256": "0xee8f84e210831db1d63c0dd511c071bcaeebe397ca231dc7bd8a2c7eb8a95b80",
+			"keccak256": "0xc6368590dd6536a96d45d601e4a93015882e2612794c546f472df51862f09860",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://f15934fa4f32ece59c0afcac4bb7c31330168707f17655df87a1da43277cfdfa",
-				"dweb:/ipfs/QmdcaRBGNEda6z1Ga4mdGD6Qq74M881wd6CeVCbhYQgwmx"
+				"bzz-raw://53d4f7b8e300d11b460fd1060238338a636e7276949eaaeadafcf2a3acefd5fc",
+				"dweb:/ipfs/Qmecs6Z2bCHRAHEvno3AnrtSEpR9XgAzioYocSErsVsmiC"
 			]
 		}
 	},

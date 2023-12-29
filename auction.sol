@@ -54,7 +54,21 @@ contract SimpleAuction{
         highestBidder = msg.sender;
         highestBid = msg.value;
         emit HighestBidIncreased(msg.sender, msg.value);
-        
-    }
 
+    }
+    // Withdraw bid that was overbid
+    function withdraw() external returns (bool) {
+        uint amount = pendingReturns[msg.sender];
+        if (amount > 0){
+            pendingReturns[msg.sender] = 0;
+            // msg.sender is not of type `address payable` and must be
+            // explicitly converted using payable(msg.sender) in order
+            // to use function `send()`
+            if(!payable(msg.sender).send(amount)){
+                pendingReturns[msg.sender] = amount;
+                return false;
+            } 
+        }
+        return true;
+    }
 }

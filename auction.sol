@@ -27,7 +27,7 @@ contract SimpleAuction{
     /// The auction has already ended
     error AuctionAlreadyEnded();
     /// There is already higher or equal bid
-    error BidNotHighEnough();
+    error BidNotHighEnough(uint highestBid);
     /// The auction has not ended yet
     error AuctionNotEndedYet();
     /// The function auctionEnd has already been called
@@ -39,6 +39,22 @@ contract SimpleAuction{
     ){
         beneficiary = beneficiaryAddress;   
         auctionEndTime = block.timestamp + biddingTime;
+    }
+
+    function bid() external payable {
+        // No args are necessary, because
+        // all info is the part of transaction
+        // `Payable` is need for function to able 
+        // receive an Ether
+        if (block.timestamp > auctionEndTime) revert AuctionAlreadyEnded();
+        if (msg.value <= highestBid) revert BidNotHighEnough(highestBid);
+        if (highestBid != 0){
+            pendingReturns[highestBidder] += highestBid;
+        }
+        highestBidder = msg.sender;
+        highestBid = msg.value;
+        emit HighestBidIncreased(msg.sender, msg.value);
+        
     }
 
 }

@@ -37,7 +37,13 @@
 				"type": "error"
 			},
 			{
-				"inputs": [],
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "highestBid",
+						"type": "uint256"
+					}
+				],
 				"name": "BidNotHighEnough",
 				"type": "error"
 			},
@@ -107,6 +113,13 @@
 			},
 			{
 				"inputs": [],
+				"name": "bid",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "highestBid",
 				"outputs": [
 					{
@@ -154,7 +167,7 @@
 						"notice": "The auction has not ended yet"
 					}
 				],
-				"BidNotHighEnough()": [
+				"BidNotHighEnough(uint256)": [
 					{
 						"notice": "There is already higher or equal bid"
 					}
@@ -182,11 +195,11 @@
 	},
 	"sources": {
 		"Рабочий стол/ETH projects/Open Auction/open_auction/auction.sol": {
-			"keccak256": "0x7f3d9fd416e3bafb80d9ac7c3149c757f9bc408683bcc1603f6bff2f5e8daeab",
+			"keccak256": "0xee8f84e210831db1d63c0dd511c071bcaeebe397ca231dc7bd8a2c7eb8a95b80",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://c0a8e8d71b0687bb6106db567c95ae4c46282c4a621300269117d5e2e2441acf",
-				"dweb:/ipfs/QmaqgLjVuUNo2EKyjDURLyc3VVeGK7fj1vuDEaEVod1vPA"
+				"bzz-raw://f15934fa4f32ece59c0afcac4bb7c31330168707f17655df87a1da43277cfdfa",
+				"dweb:/ipfs/QmdcaRBGNEda6z1Ga4mdGD6Qq74M881wd6CeVCbhYQgwmx"
 			]
 		}
 	},

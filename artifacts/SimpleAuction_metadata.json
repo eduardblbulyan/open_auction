@@ -1,0 +1,194 @@
+{
+	"compiler": {
+		"version": "0.8.22+commit.4fc1097e"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "biddingTime",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address payable",
+						"name": "beneficiaryAddress",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "AuctionAlreadyEnded",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "AuctionEndAlreadyCalled",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "AuctionNotEndedYet",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "BidNotHighEnough",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "winner",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "AuctionEnded",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "bidder",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "HighestBidIncreased",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "auctionEndTime",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "beneficiary",
+				"outputs": [
+					{
+						"internalType": "address payable",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "highestBid",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "highestBidder",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"errors": {
+				"AuctionAlreadyEnded()": [
+					{
+						"notice": "The auction has already ended"
+					}
+				],
+				"AuctionEndAlreadyCalled()": [
+					{
+						"notice": "The function auctionEnd has already been called"
+					}
+				],
+				"AuctionNotEndedYet()": [
+					{
+						"notice": "The auction has not ended yet"
+					}
+				],
+				"BidNotHighEnough()": [
+					{
+						"notice": "There is already higher or equal bid"
+					}
+				]
+			},
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Рабочий стол/ETH projects/Open Auction/open_auction/auction.sol": "SimpleAuction"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Рабочий стол/ETH projects/Open Auction/open_auction/auction.sol": {
+			"keccak256": "0x7f3d9fd416e3bafb80d9ac7c3149c757f9bc408683bcc1603f6bff2f5e8daeab",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://c0a8e8d71b0687bb6106db567c95ae4c46282c4a621300269117d5e2e2441acf",
+				"dweb:/ipfs/QmaqgLjVuUNo2EKyjDURLyc3VVeGK7fj1vuDEaEVod1vPA"
+			]
+		}
+	},
+	"version": 1
+}
